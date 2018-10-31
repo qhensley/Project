@@ -6,57 +6,60 @@
 	<style type="text/css">
 		.account{
 			width: 1000px;
-			height: 50px;
-			background: red;
-			margin:auto;
+			height: 150px;
+			/*background: red;*/
+			margin:30px auto;
 		}
-		.account p{
-			text-align: right;
-			font-size:18px;
-			margin-right: 20px;
+		.account img{
+			float: right;
 		}
 		.tools{
 			text-align: center;
-			font-size: 20px;
+			font-size: 50px;
 		}
 		.img{
 			width: 900px;
-			height: 900px;
+			height: 1330px;
 			padding-left: 50px;
 			padding-right: 50px;
 			margin:auto;
-			background: grey;
+			/*background: grey;*/
 		}
 		.img div{
 			width: 150px;
-			height: 180px;
-			margin-top: 30px;
-			background: yellow;
+			height: 200px;
+			margin-top: 100px;
+			background: grey;
 			margin-left: 60px;
 			float: left;
 		}
 		.nav{
 			width: 1000px;
-			height: 100px;
-			background: red;
+			height: 130px;
+			/*background: red;*/
 			margin:auto;
-		}
-		.nav div{
-			width: 100px;
-			height: 50px;
-			float: left;
-			margin-top: 20px;
 			background: rgb(200,200,200);
 		}
-		.continue{
-			margin-left: 800px;
+		.nav div{
+			width: 150px;
+			height: 50px;
+			float: left;
+			/*margin-top: 20px;*/
+			/*background: rgb(200,200,200);*/
+		}
+		.next{
+			margin-left: 700px;
 		}
 		.nav div p{
 			text-align: center;
+			font-size: 40px;
 		}
 		a{
 			text-decoration: none;
 			color: black;
+		}
+		p{
+			font-family: arial;
 		}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -70,13 +73,11 @@
 </head>
 <body>
 	<div class="account">
-		<p>
-			<a href=""#>account</a>
-		</p>
+			<a href="#"><img src="image/account.png" width="15%"></a>
 	</div>
-	<p class="tools">Tools I Have:</p>
+	<p class="tools">Tools I Have</p>
 	<div class="img">
-		<div></div>
+		<div id="test"></div>
 		<div></div>
 		<div></div>
 		<div></div>
@@ -99,9 +100,9 @@
 				<p>Back</p>
 			</a>
 		</div>
-		<div class="continue">
+		<div class="next">
 			<a href="#">
-				<p>Continue</p>
+				<p>Next</p>
 			</a>
 		</div>
 	</div>

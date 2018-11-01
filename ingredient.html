@@ -1,2 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>ingredients</title>
+	<style type="text/css">
+		.account{
+			width: 1000px;
+			height: 150px;
+			/*background: red;*/
+			margin:30px auto;
+		}
+		.account img{
+			float: right;
+			margin-right: 20px;
+		}
+		.title {
+			text-align: center;
+			font-size: 50px;
+		}
+		.title{
+			width: 1000px;
+			height: 260px;
+		}
+		.list{
+			width: 900px;
+			height: 1160px;
+			padding-left: 50px;
+			padding-right: 50px;
+			margin:auto;
+			/*background: grey;*/
+		}
+		.list div{
+			width: 150px;
+			height: 200px;
+			margin-top: 100px;
+			background: grey;
+			margin-left: 60px;
+			float: left;
+		}
+		.list li{
+			font-size: 40px;
+			line-height: 60px;
+			list-style: none;
+		}
+		.list button{
+			float: right;
+			font-size: 30px;
+		}
+		.nav{
+			width: 1000px;
+			height: 130px;
+			/*background: red;*/
+			margin:auto;
+			background: rgb(200,200,200);
+		}
+		.nav div{
+			width: 150px;
+			height: 50px;
+			float: left;
+			/*margin-top: 20px;*/
+			/*background: rgb(200,200,200);*/
+		}
+		.next{
+			margin-left: 700px;
+		}
+		.nav div p{
+			text-align: center;
+			font-size: 40px;
+		}
+		a{
+			text-decoration: none;
+			color: black;
+		}
+		p{
+			font-family: arial;
+		}
+		input[type=text] {
+    		width: 30%;
+    		padding: 20px 10px;
+    		margin: 8px 0;
+    		box-sizing: border-box;
+    		/*border: 2px solid red;*/
+    		border-radius: 4px;
+    		font-size: 25px;
+		}
+		button{
+			font-size: 25px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+    		$("#test1 button").click(function(){
+        		$("#test1").remove();
+    		});
+		});
+		$(document).ready(function(){
+    		$("#test2 button").click(function(){
+        		$("#test2").remove();
+    		});
+		});
+		$(document).ready(function(){
+    		$("#test3 button").click(function(){
+        		$("#test3").remove();
+    		});
+		});
+	</script>
+</head>
 <body>
+	<div class="account">
+			<a href="#"><img src="image/account.png" width="15%"></a>
+	</div>
+	<div class="title">
+		<p>Ingredients I Have</p>
+		<form name="test" method="get" action="#">
+			<p>
+				<input type="text"  placeholder="e.g. tomato"> 
+				<button type="button" onclick="alert('ingredient added!')">Add</button>
+			</p>		
+		</form>
+	</div>
+	<div class="list">
+		<ul>
+			<li id="test1">Beef<button type="button" >Delete</button></li>
+			<li id="test2">Tomato<button type="button" >Delete</button></li>
+			<li id="test3">Egg<button type="button">Delete</button></li>
+		</ul>
+	</div>
+	<div class="nav">
+		<div class="back">
+			<a href="#">
+				<p>Back</p>
+			</a>
+		</div>
+		<div class="next">
+			<a href="#">
+				<p>Next</p>
+			</a>
+		</div>
+	</div>
+
 </body>
+</html>
+
+

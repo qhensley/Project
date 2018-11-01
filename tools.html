@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<title>tools</title>
 	<style type="text/css">
@@ -12,14 +13,19 @@
 		}
 		.account img{
 			float: right;
+			margin-right: 20px;
 		}
-		.tools{
+		.tools p{
 			text-align: center;
 			font-size: 50px;
 		}
+		.tools{
+			width: 1000px;
+			height: 60px;
+		}
 		.img{
 			width: 900px;
-			height: 1330px;
+			height: 1360px;
 			padding-left: 50px;
 			padding-right: 50px;
 			margin:auto;
@@ -32,6 +38,11 @@
 			background: grey;
 			margin-left: 60px;
 			float: left;
+		}
+		.img p{
+			color: white;
+			text-align: center;
+			font-size: 20px;
 		}
 		.nav{
 			width: 1000px;
@@ -64,35 +75,51 @@
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
+		// $(document).ready(function(){
+  //   		$(".img div").click(function(){
+  //       		$(this).css("background","red");
+  //   		});
+		// });
+
+		var c = 1;
 		$(document).ready(function(){
-    		$(".img div").click(function(){
-        		$(this).hide();
-    		});
+			$(".img div").click(function(){
+    			if(c==1){
+        			$(this).css('background', 'red');
+        			c = 2;
+    			} else {
+        			$(this).css('background', 'grey');
+        			c = 1;
+    			}   
+			});
 		});
-	</script>
+		</script>
 </head>
 <body>
 	<div class="account">
 			<a href="#"><img src="image/account.png" width="15%"></a>
 	</div>
-	<p class="tools">Tools I Have</p>
+	<div class="tools">
+		<p>Tools I Have</p>
+	</div>
 	<div class="img">
-		<div id="test"></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
+		<div><p>Cooktop</p></div>
+		<div><p>Oven</p></div>
+		<div><p>Baking&nbsp;Pan</p></div>
+		<div><p>Rice&nbsp;Cooker</p></div>
+		<div><p>Steamer</p></div>
+		<div><p>Microwave</p></div>
+		<div><p>Knife</p></div>
+		<div><p>Cutting&nbsp;Board</p></div>
+		<div><p>Fry&nbsp;Pan</p></div>
+		<div><p>Pot</p></div>
+		<div><p>Scale</p></div>
+		<div><p>Measuring&nbsp;Cup</p></div>
+		<div><p>Mixer</p></div>
+		<div><p>Filter</p></div>
+		<div><p>Rolling&nbsp;Pin</p></div>
+		<div><p>Pressure&nbsp;Cooker</p></div>
+		
 	</div>
 	<div class="nav">
 		<div class="back">

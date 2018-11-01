@@ -31,18 +31,16 @@
 			margin:auto;
 			/*background: grey;*/
 		}
-		.list div{
-			width: 150px;
-			height: 200px;
-			margin-top: 100px;
-			background: grey;
-			margin-left: 60px;
-			float: left;
+
+		ul{
+			padding-left: 0px;
 		}
 		.list li{
 			font-size: 40px;
 			line-height: 60px;
 			list-style: none;
+			background: rgb(220,220,220);
+			margin-top: 10px;
 		}
 		.list button{
 			float: right;
@@ -88,6 +86,7 @@
 		button{
 			font-size: 25px;
 		}
+	
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
@@ -107,6 +106,7 @@
     		});
 		});
 	</script>
+	
 </head>
 <body>
 	<div class="account">
@@ -120,6 +120,7 @@
 				<button type="button" onclick="alert('ingredient added!')">Add</button>
 			</p>		
 		</form>
+
 	</div>
 	<div class="list">
 		<ul>

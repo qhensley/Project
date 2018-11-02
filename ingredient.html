@@ -1,64 +1,107 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="UTF-8">
-	<title>ingredients</title>
+	<title></title>
 	<style type="text/css">
-		.account{
-			width: 1000px;
-			height: 150px;
-			/*background: red;*/
-			margin:30px auto;
-		}
-		.account img{
-			float: right;
-			margin-right: 20px;
-		}
-		.title {
-			text-align: center;
-			font-size: 50px;
-		}
-		.title{
-			width: 1000px;
-			height: 260px;
-		}
-		.list{
-			width: 900px;
-			height: 1160px;
-			padding-left: 50px;
-			padding-right: 50px;
-			margin:auto;
-			/*background: grey;*/
-		}
+  .account{
+      width: 1000px;
+      height: 150px;
+      /*background: red;*/
+      margin:30px auto;
+    }
+    .account img{
+      float: right;
+      margin-right: 20px;
+    }
+  * {
+      box-sizing: border-box;
+  }
 
-		ul{
-			padding-left: 0px;
-		}
-		.list li{
-			font-size: 40px;
-			line-height: 60px;
-			list-style: none;
-			background: rgb(220,220,220);
-			margin-top: 10px;
-		}
-		.list button{
-			float: right;
-			font-size: 30px;
-		}
-		.nav{
-			width: 1000px;
-			height: 130px;
-			/*background: red;*/
-			margin:auto;
-			background: rgb(200,200,200);
-		}
+  ul {
+      margin: 0;
+      padding: 0;
+      width: 1000px;
+      height: 1130px;
+  }
+
+  ul li {
+      cursor: pointer;
+      position: relative;
+      padding: 12px 8px 12px 40px;
+      background: #eee;
+      font-size: 40px;
+      font-family: arial;
+      transition: 0.2s;
+      margin-top: 20px;
+  }
+
+  ul li:nth-child(odd) {
+      background: #f9f9f9;
+  }
+
+  .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px 16px 12px 16px;
+  }
+
+  .close:hover {
+      background-color: #f44336;
+      color: white;
+  }
+
+  .header {
+      width: 1000px;
+      height: 300px;
+      background-color: #f44336;
+      padding: 30px 40px;
+      color: white;
+      text-align: center;
+  }
+
+  input {
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      width: 75%;
+      padding: 10px;
+      float: left;
+      font-size: 40px;
+      font-family: arial;
+  }
+
+  .addBtn {
+      padding: 10px;
+      width: 25%;
+      background: #d9d9d9;
+      color: #555;
+      float: left;
+      text-align: center;
+      font-size: 40px;
+      font-family: arial;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 0;
+  }
+
+  .nav{
+  		width: 1000px;
+  		height: 130px;
+  		/*background: red;*/
+  		margin:auto;
+  		background: rgb(200,200,200);
+  		position: fixed;
+      top: auto;
+      right: 0;
+      left: 0;
+      bottom: 0;
+  		}
 		.nav div{
 			width: 150px;
 			height: 50px;
 			float: left;
-			/*margin-top: 20px;*/
-			/*background: rgb(200,200,200);*/
 		}
 		.next{
 			margin-left: 700px;
@@ -66,83 +109,93 @@
 		.nav div p{
 			text-align: center;
 			font-size: 40px;
+      font-family: arial;
 		}
 		a{
 			text-decoration: none;
 			color: black;
 		}
-		p{
-			font-family: arial;
+		h2{
+			font-size: 50px;
+      font-family: arial;
 		}
-		input[type=text] {
-    		width: 30%;
-    		padding: 20px 10px;
-    		margin: 8px 0;
-    		box-sizing: border-box;
-    		/*border: 2px solid red;*/
-    		border-radius: 4px;
-    		font-size: 25px;
-		}
-		button{
-			font-size: 25px;
-		}
-	
 	</style>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-    		$("#test1 button").click(function(){
-        		$("#test1").remove();
-    		});
-		});
-		$(document).ready(function(){
-    		$("#test2 button").click(function(){
-        		$("#test2").remove();
-    		});
-		});
-		$(document).ready(function(){
-    		$("#test3 button").click(function(){
-        		$("#test3").remove();
-    		});
-		});
-	</script>
-	
 </head>
-<body>
-	<div class="account">
+<body> 
+  <div class="account">
 			<a href="account.html"><img src="image/account.png" width="15%"></a>
 	</div>
-	<div class="title">
-		<p>Ingredients I Have</p>
-		<form name="test" method="get" action="#">
-			<p>
-				<input type="text"  placeholder="e.g. tomato"> 
-				<button type="button" onclick="alert('ingredient added!')">Add</button>
-			</p>		
-		</form>
+  <div id="myDIV" class="header">
+    <h2>Ingredients I Have</h2>
+    <input type="text" id="myInput" placeholder="e.g. Tomato">
+    <span onclick="newElement()" class="addBtn">Add</span>
+  </div>
 
-	</div>
-	<div class="list">
-		<ul>
-			<li id="test1">Beef<button type="button" >Delete</button></li>
-			<li id="test2">Tomato<button type="button" >Delete</button></li>
-			<li id="test3">Egg<button type="button">Delete</button></li>
-		</ul>
-	</div>
-	<div class="nav">
-		<div class="back">
-			<a href="#">
-				<p>Back</p>
-			</a>
-		</div>
-		<div class="next">
-			<a href="tools.html">
-				<p>Next</p>
-			</a>
-		</div>
-	</div>
+  <ul id="myUL">
+    <li>Tomato</li>
+    <li >Beef</li>
+    <li>Egg</li>
+    <li>Spaghetti</li>
 
-</body>
+  </ul>
+  <script type="text/javascript">
+  	var myNodelist = document.getElementsByTagName("LI");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+  }
+
+  var close = document.getElementsByClassName("close");
+  var i;
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+
+
+  function newElement() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("myInput").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myUL").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+  }
+  </script>
+  <div class="nav">
+  		<div class="back">
+  			<a href="#">
+  				<p>Back</p>
+  			</a>
+  		</div>
+  		<div class="next">
+  			<a href="tools.html">
+  				<p>Next</p>
+  			</a>
+  		</div>
+  	</div>
+  </body>
 </html>
-
-
